@@ -25,10 +25,14 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar state={state} setSearchResult={setSearchResult} />
+      {/* Navbar Section */}
+      <div className="navbar-section">
+        <Navbar state={state} setSearchResult={setSearchResult} />
+      </div>
 
-      <section className="Hero_Section">
-        <div className="row" style={{ maxWidth: "100%",alignItems:"center"}}>
+      {/* Header Section */}
+      <section className="header-section">
+        <div className="row" style={{ maxWidth: "100%", alignItems: "center" }}>
           <div className="col-lg-6" id="head" style={{ marginTop: "90px" }}>
             <h1
               style={{
@@ -51,7 +55,17 @@ function App() {
             <h3 style={{ color: "#EF6C00", fontSize: "30px" }}>
               Exploring the Future...
             </h3>
-            <p style={{color:"#EF6C00",fontSize:"20px",fontWeight:500}}>Well, millions of tech enthusiasts, as well as businesses from all sectors, befriend technology blogs that bring the latest news regarding technology updates faster than any other source.</p>
+            <p
+              style={{
+                color: "#EF6C00",
+                fontSize: "20px",
+                fontWeight: 500,
+              }}
+            >
+              Well, millions of tech enthusiasts, as well as businesses from all
+              sectors, befriend technology blogs that bring the latest news
+              regarding technology updates faster than any other source.
+            </p>
           </div>
           <div className="col-lg-6">
             <img
@@ -63,8 +77,16 @@ function App() {
           </div>
         </div>
       </section>
-      <List searchResult={searchResult} />
-      <Footer />
+
+      {/* Main Section */}
+      <div className="main-section">
+        <List searchResult={searchResult} />
+      </div>
+
+      {/* Footer Section */}
+      <div className="footer-section">
+        <Footer />
+      </div>
     </div>
   );
 }
